@@ -1,0 +1,55 @@
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container div {
+  margin-bottom: 10px;
+}
+
+.container label {
+  display: inline-block;
+  width: 150px;
+}
+
+.container select,
+.container input[type="number"] {
+  width: calc(100% - 170px);
+  padding: 5px;
+  margin: 0px 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container div > div {
+  display: flex;
+  margin-top: 5px;
+}
+
+.container div > div input[type="radio"],
+.container div > div label {
+  margin-right: 10px;
+}

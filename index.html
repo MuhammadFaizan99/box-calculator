@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Box Calculator</h1>
+    <div>
+      <label for="productName">Product Name:</label>
+      <select id="productName">
+        <option value="mailer">Mailer Boxes</option>
+        <option value="folding">Folding Carton Boxes</option>
+        <option value="rigid">Rigid Boxes</option>
+        <option value="magnetic">Magnetic Rigid Boxes</option>
+        <option value="display">Display Boxes</option>
+        <option value="tray_sleeve">Tray and Sleeve Boxes</option>
+        <option value="cardboard_tubes">Cardboard Tubes</option>
+        <option value="foldable_lid_base">Foldable Lid and Base</option>
+        <option value="cake">Cake Boxes</option>
+        <option value="paper">Paper Bags</option>
+        <option value="pillow">Pillow Boxes</option>
+        <option value="shipping">Shipping Boxes</option>
+        <option value="rectangle">Rectangle</option>
+        <option value="pizza">Pizza Type</option>
+        <option value="tuck_in">Tuck in</option>
+      </select>
+    </div>
+    <div>
+      <label for="paperQuality">Paper Quality/Card Quality:</label>
+      <select id="paperQuality">
+        <option value="kraft">Kraft Paper</option>
+        <option value="white">White Cardboard</option>
+        <option value="corrugated">Corrugated Cardboard</option>
+        <option value="coated">Coated Paperboard</option>
+        <option value="fbb">Folding Box Board (FBB)</option>
+      </select>
+    </div>
+    <div>
+      <label>Size of Box:</label>
+      <div>
+        <input type="radio" id="sizeUnitInches" name="sizeUnit" value="inches" checked>
+        <label for="sizeUnitInches">Inches</label>
+        <input type="radio" id="sizeUnitMm" name="sizeUnit" value="mm">
+        <label for="sizeUnitMm">mm</label>
+        <input type="radio" id="sizeUnitCm" name="sizeUnit" value="cm">
+        <label for="sizeUnitCm">cm</label>
+      </div>
+      <div>
+        <input type="number" id="length" placeholder="Enter Length">
+        <input type="number" id="width" placeholder="Enter Width">
+        <input type="number" id="height" placeholder="Enter Height">
+      </div>
+    </div>
+    <div>
+      <label for="color">Color of Box:</label>
+      <select id="color">
+        <option value="brown">Brown</option>
+        <option value="white">White</option>
+      </select>
+    </div>
+    <div>
+      <label for="print">Print:</label>
+      <select id="print">
+        <option value="none">None</option>
+        <option value="single">Single Colour</option>
+        <option value="multi">Multi Colour (CMYK)</option>
+      </select>
+    </div>
+    <div>
+      <label for="coating">Coating:</label>
+      <select id="coating">
+        <option value="thermalGloss">Thermal Gloss</option>
+        <option value="pvcLamination">PVC Lamination</option>
+        <option value="emboss">Emboss</option>
+        <option value="silver">Silver</option>
+        <option value="leafFull">Leaf Full</option>
+        <option value="hybridDripoff">Hybrid (Dripoff)</option>
+        <option value="varnishCoating">Varnish Coating</option>
+        <option value="thermalMATT">Thermal MATT</option>
+        <option value="spotUV">Spot UV</option>
+        <option value="mattHalf">Matt Half</option>
+        <option value="halfGlossLamination">Half Gloss Lamination</option>
+        <option value="mattLamination">Matt Lamination</option>
+        <option value="glossLamination">Gloss Lamination</option>
+        <option value="leaf">Leaf</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+    <div>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity">
+    </div>
+    <button onclick="calculatePrice()">Calculate Price</button>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
