@@ -81,25 +81,25 @@ function calculatePrice() {
 function getProductBase(productName) {
   switch (productName) {
     case "mailer":
-      return 0.09;
-    case "folding":
-      return 0.11;
-    case "rigid":
       return 0.15;
-    case "magnetic":
+    case "folding":
+      return 0.15;
+    case "rigid":
       return 0.2;
+    case "magnetic":
+      return 0.35;
     case "display":
-      return 0.13;
+      return 0.22;
     case "tray_sleeve":
-      return 0.13;
+      return 0.25;
     case "cardboard_tubes":
-      return 0.07;
+      return 0.15;
     case "foldable_lid_base":
-      return 0.13;
+      return 0.2;
     case "cake":
-      return 0.11;
+      return 0.03;
     case "paper":
-      return 0.05;
+      return 0.000005;
     case "pillow":
       return 0.09;
     case "shipping":
@@ -118,15 +118,15 @@ function getProductBase(productName) {
 function getPaperQualityBase(paperQuality) {
   switch (paperQuality) {
     case "kraft":
-      return 0.08;
+      return 0.06;
     case "white":
-      return 0.1;
+      return 0.05;
     case "corrugated":
-      return 0.12;
+      return 0.05;
     case "coated":
-      return 0.14;
+      return 0.04;
     case "fbb":
-      return 0.16;
+      return 0.04;
     default:
       return 0;
   }
@@ -137,7 +137,7 @@ function getColorBase(color) {
     case "brown":
       return 0.04;
     case "white":
-      return 0.08;
+      return 0.06;
     default:
       return 0;
   }
@@ -148,9 +148,9 @@ function getPrintBase(print) {
     case "none":
       return 0.0;
     case "single":
-      return 0.1;
+      return 0.03;
     case "multi":
-      return 0.2;
+      return 0.06;
     default:
       return 0;
   }
@@ -159,33 +159,33 @@ function getPrintBase(print) {
 function getCoatingBase(coating) {
   switch (coating) {
     case "thermalGloss":
-      return 0.1;
+      return 0.05;
     case "pvcLamination":
-      return 0.15;
+      return 0.05;
     case "emboss":
-      return 0.12;
+      return 0.06;
     case "silver":
-      return 0.08;
+      return 0.05;
     case "leafFull":
-      return 0.2;
+      return 0.08;
     case "hybridDripoff":
-      return 0.18;
+      return 0.04;
     case "varnishCoating":
-      return 0.1;
+      return 0.05;
     case "thermalMATT":
-      return 0.12;
+      return 0.05;
     case "spotUV":
-      return 0.12;
+      return 0.05;
     case "mattHalf":
-      return 0.1;
+      return 0.04;
     case "halfGlossLamination":
-      return 0.12;
+      return 0.06;
     case "mattLamination":
-      return 0.1;
+      return 0.05;
     case "glossLamination":
-      return 0.12;
+      return 0.06;
     case "leaf":
-      return 0.15;
+      return 0.06;
     case "none":
       return 0;
     default:
