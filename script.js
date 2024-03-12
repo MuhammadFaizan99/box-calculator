@@ -105,11 +105,11 @@ function getProductBase(productName) {
     case "shipping":
       return 0.2;
     case "rectangle":
-      return 0.17;
+      return 0.16;
     case "pizza":
-      return 0.18;
+      return 0.15;
     case "tuck_in":
-      return 0.18;
+      return 0.16;
     default:
       return 0;
   }
