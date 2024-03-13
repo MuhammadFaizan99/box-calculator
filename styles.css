@@ -122,6 +122,7 @@
 .price-calculator-container .image-container img.fade-in {
   opacity: 1;
 }
+
 .price-calculator-container .main-unit-buttons {
   display: flex;
   align-items: center;
@@ -163,6 +164,7 @@
   .price-calculator-container .main-section {
     flex-direction: column;
   }
+
   .price-calculator-container h1 {
     font-size: 25px;
   }
@@ -171,30 +173,30 @@
   .price-calculator-container .right-side {
     width: 100%;
     margin-left: 0;
-    margin-top: 20px; 
+    margin-top: 20px;
   }
 
   .price-calculator-container .main-unit-buttons {
-    flex-direction: column; /* Change to column direction */
-    align-items: center; 
-    padding: 10px; /* Adjust padding */
-    margin-left: 0px; 
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-left: 0px;
     margin-bottom: 20px;
   }
 
   .price-calculator-container .main-unit-buttons button {
-    margin-right: 0; 
+    margin-right: 0;
     margin-bottom: 10px;
   }
 
   .price-calculator-container .image-container {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 20px;
   }
 
   .price-calculator-container .image-container img {
-    margin-right: 0; 
-    margin-bottom: 10px; 
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }

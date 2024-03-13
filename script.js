@@ -305,22 +305,22 @@ function changeUnit(unit) {
 }
 
 // Set default values and calculate price on page load
-window.addEventListener('DOMContentLoaded', (event) => {
-    // Set default values for input fields
-    document.getElementById('unitInches').classList.add('active');
-    document.getElementById('unitMm').classList.remove('active');
-    document.getElementById('unitCm').classList.remove('active');
-    document.getElementById('productName').value = 'mailer';
-    document.getElementById('paperQuality').value = 'corrugated';
-    document.getElementById('length').value = '8';
-    document.getElementById('width').value = '8';
-    document.getElementById('height').value = '4';
-    document.getElementById('color').value = 'brown';
-    document.getElementById('print').value = 'none';
-    document.getElementById('coating').value = 'none';
-    document.getElementById('quantity').value = '1';
+window.addEventListener("DOMContentLoaded", (event) => {
+  // Set default values for input fields
+  document.getElementById("unitInches").classList.add("active");
+  document.getElementById("unitMm").classList.remove("active");
+  document.getElementById("unitCm").classList.remove("active");
+  document.getElementById("productName").value = "mailer";
+  document.getElementById("paperQuality").value = "corrugated";
+  document.getElementById("length").value = "8";
+  document.getElementById("width").value = "8";
+  document.getElementById("height").value = "4";
+  document.getElementById("color").value = "brown";
+  document.getElementById("print").value = "none";
+  document.getElementById("coating").value = "none";
+  document.getElementById("quantity").value = "1";
 
-    // Display selected images and calculate price
-    displaySelectedImages();
-    calculatePrice();
+  // Display selected images and calculate price
+  displaySelectedImages();
+  calculatePrice();
 });
