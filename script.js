@@ -304,7 +304,6 @@ function changeUnit(unit) {
   }
 }
 
-// Set default values and calculate price on page load
 window.addEventListener("DOMContentLoaded", (event) => {
   // Set default values for input fields
   document.getElementById("unitInches").classList.add("active");
