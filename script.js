@@ -14,7 +14,7 @@ const productImages = {
   shipping: "./Images/shipping.jpg",
   rectangle: "./Images/Rectangle.webp",
   pizza: "./Images/Pizza Type.jpg",
-  tuck_in: "./Images/tuck_in.webp"
+  tuck_in: "./Images/tuck_in.webp",
 };
 
 // Object containing image URLs for each Paper Quality/Card Quality
@@ -23,7 +23,7 @@ const paperQualityImages = {
   white: "./Images/white.webp",
   corrugated: "./Images/corrugated.jpg",
   coated: "./Images/coated.jpg",
-  fbb: "./Images/fbb.webp"
+  fbb: "./Images/fbb.webp",
 };
 
 // Function to display selected images
@@ -32,8 +32,12 @@ function displaySelectedImages() {
   const paperQuality = document.getElementById("paperQuality").value;
   const productImage = productImages[productName];
   const paperQualityImage = paperQualityImages[paperQuality];
-  const productImageContainer = document.getElementById("productImageContainer");
-  const paperQualityImageContainer = document.getElementById("paperQualityImageContainer");
+  const productImageContainer = document.getElementById(
+    "productImageContainer"
+  );
+  const paperQualityImageContainer = document.getElementById(
+    "paperQualityImageContainer"
+  );
 
   // Clear previous images
   productImageContainer.innerHTML = "";
@@ -96,8 +100,11 @@ function calculatePrice() {
   if (!quantity) errorMessages.push("Quantity");
 
   if (errorMessages.length > 0) {
-    const errorMessage = "Please fill in the following fields: " + errorMessages.join(", ");
-    document.getElementById("result").innerHTML = `<span style="color: red;">${errorMessage}</span>`;
+    const errorMessage =
+      "Please fill in the following fields: " + errorMessages.join(", ");
+    document.getElementById(
+      "result"
+    ).innerHTML = `<span style="color: red;">${errorMessage}</span>`;
     return; // Exit function if there are validation errors
   }
 
@@ -122,11 +129,11 @@ function calculatePrice() {
       break;
   }
 
-  const areaOfBox = 2 * (
-    size.length * size.width +
-    size.length * size.height +
-    size.width * size.height
-  );
+  const areaOfBox =
+    2 *
+    (size.length * size.width +
+      size.length * size.height +
+      size.width * size.height);
   const productBase = getProductBase(productName);
   const paperQualityBase = getPaperQualityBase(paperQuality);
   const colorBase = getColorBase(color);
@@ -142,7 +149,9 @@ function calculatePrice() {
       areaOfBox * coatingBase);
 
   const resultElement = document.getElementById("result");
-  resultElement.innerHTML = `Price/Box: PKR ${(price.toFixed(2) / quantity).toFixed(2)}<br>Total Price of Box: PKR ${price.toFixed(2)}`;
+  resultElement.innerHTML = `Price/Box: PKR ${(
+    price.toFixed(2) / quantity
+  ).toFixed(2)}<br>Total Price of Box: PKR ${price.toFixed(2)}`;
 
   // Triggering fade-in effect
   resultElement.classList.add("show");
@@ -268,12 +277,12 @@ function changeUnit(unit) {
   const unitInches = document.getElementById("unitInches");
   const unitMm = document.getElementById("unitMm");
   const unitCm = document.getElementById("unitCm");
-  
+
   unitInches.classList.remove("active");
   unitMm.classList.remove("active");
   unitCm.classList.remove("active");
-  
-  switch(unit) {
+
+  switch (unit) {
     case "inches":
       unitInches.classList.add("active");
       document.getElementById("length").placeholder = "Enter Length in inches";
