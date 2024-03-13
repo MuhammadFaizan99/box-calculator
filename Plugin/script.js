@@ -1,29 +1,29 @@
 // Object containing image URLs for each Product Name
 const productImages = {
-  mailer: "https://static.vecteezy.com/system/resources/previews/013/362/649/non_2x/cardboard-box-brown-free-png.png",
-  folding: "https://5.imimg.com/data5/SELLER/Default/2022/8/OV/YX/QW/24057945/folding-cartons-packaging-box-500x500.png",
-  rigid: "https://www.emenacpackaging.com/wp-content/uploads/2021/12/Fliptop-Rigid-Boxes-2.webp",
-  magnetic: "https://5.imimg.com/data5/IW/LX/SF/SELLER-71546247/lcbm9-500x500.jpg",
-  display: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*-QgRXew_c2XBDrrWMbuxAw.jpeg",
-  tray_sleeve: "https://www.liquidprinter.com/images/custom-sleeve-box.jp",
-  cardboard_tubes: "https://m.media-amazon.com/images/I/61IYZ2C+HiL._AC_SY300_SX300_.jpg",
-  foldable_lid_base: "https://i5.walmartimages.com/asr/adbb1c07-2792-4d5e-8567-6bdc314ade5e.21616d58a2edb6bf2f1934d5afc11705.png?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
-  cake: "https://m.media-amazon.com/images/I/51bnigyaEDL._AC_SL1500_.jpg",
-  paper: "https://cdn-hallh.nitrocdn.com/SAfCWcaKwKxWFpBYamCDCMxSsjTmthln/assets/images/optimized/rev-ceff243/nashonuma.com/wp-content/uploads/2021/11/kraft-paper-bags.jpg",
-  pillow: "https://s3.amazonaws.com/sireprinting.com/products/1654375989Kraft%20Pillow%20Boxes%20Sire%20Printing%2006.png-gallery4",
-  shipping: "https://www.arteau.com/wp-content/uploads/2018/06/boites-1.jpg.webp",
-  rectangle: "https://image.jimcdn.com/app/cms/image/transf/dimension=1820x1280:format=png/path/sd8122626139b36bd/image/i38255a44fbc4fc8c/version/1686253539/image.png",
-  pizza: "https://mmwillcare.com/storage/products/b4.jpg",
-  tuck_in: "https://img.uline.com/is/image/uline/HD10_8351?$UtilityRHD$",
+  mailer: "./Images/mailer.png",
+  folding: "./Images/folding.jpg",
+  rigid: "./Images/rigid.webp",
+  magnetic: "./Images/magnetic.png",
+  display: "./Images/display.jpg",
+  tray_sleeve: "./Images/tray_sleeve.png",
+  cardboard_tubes: "./Images/cardboard_tubes.jpg",
+  foldable_lid_base: "./Images/foldable_lid_base.webp",
+  cake: "./Images/cake.jpg",
+  paper: "./Images/paper.jpg",
+  pillow: "./Images/pillow.jpg",
+  shipping: "./Images/shipping.jpg",
+  rectangle: "./Images/Rectangle.webp",
+  pizza: "./Images/Pizza Type.jpg",
+  tuck_in: "./Images/tuck_in.webp",
 };
 
 // Object containing image URLs for each Paper Quality/Card Quality
 const paperQualityImages = {
-  kraft: "https://www.varietypapers.com.pk/wp-content/uploads/2020/08/412jwDZvGnL.jpg",
-  white: "https://5.imimg.com/data5/NX/DF/MY-31341022/fbb-coated-board-500x500.jpg",
-  corrugated: "https://m.media-amazon.com/images/I/91tVjDpEZuL._AC_SL1500_.jpg",
-  coated: "https://www.greypaperboard.com/img5564.weyesimg.com/uploads/gaii0lsc.allweyes.com/images/15505563328652de47.jpg?imageView2/2/w/1920/q/100",
-  fbb: "https://5.imimg.com/data5/SELLER/Default/2023/1/UG/RJ/JV/583245/folding-box-board-fbb-500x500.jpg",
+  kraft: "./Images/kraft.jpg",
+  white: "./Images/white.webp",
+  corrugated: "./Images/corrugated.jpg",
+  coated: "./Images/coated.jpg",
+  fbb: "./Images/fbb.webp",
 };
 
 // Function to display selected images

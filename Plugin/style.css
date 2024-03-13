@@ -1,0 +1,204 @@
+.price-calculator-container {
+  max-width: 800px;
+  font-family: "Poppins", sans-serif;
+  margin: 15px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-between;
+}
+
+.price-calculator-container .main-section {
+  display: flex;
+  justify-content: center;
+}
+
+.price-calculator-container h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.price-calculator-container label {
+  font-weight: 600;
+}
+
+.price-calculator-container .left-side {
+  width: 40%;
+}
+
+.price-calculator-container .right-side {
+  width: 40%;
+  margin-left: 30px;
+}
+
+.price-calculator-container input[type="number"],
+.price-calculator-container select,
+.price-calculator-container .calculatePrice {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  margin-top: 8px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.price-calculator-container input[type="number"] {
+  width: 93.5%;
+}
+
+.price-calculator-container .price-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-calculator-container .calculatePrice {
+  width: 84%;
+  font-family: "Poppins", sans-serif;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.price-calculator-container .calculatePrice:hover {
+  background-color: #45a049;
+}
+
+.price-calculator-container select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+}
+
+.price-calculator-container .left-side>div:nth-child(3) {
+  margin-bottom: 15px;
+}
+
+.price-calculator-container .size-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-calculator-container .size-box input[type="radio"] {
+  margin-right: 5px;
+}
+
+.price-calculator-container #result {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.price-calculator-container #result.show {
+  opacity: 1;
+  margin-top: 30px;
+  line-height: 20px;
+}
+
+.price-calculator-container .image-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-calculator-container .image-container img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.price-calculator-container .image-container img.fade-in {
+  opacity: 1;
+}
+
+.price-calculator-container .main-unit-buttons {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin-left: 45px;
+  margin-bottom: 5px;
+}
+
+.price-calculator-container .unit-buttons button {
+  color: black;
+  border: 2px solid #e8e6e6;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  padding: 7px 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.price-calculator-container .unit-buttons button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+.price-calculator-container .unit-buttons button.active {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 700px) {
+  .price-calculator-container {
+    max-width: 100%;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .price-calculator-container .main-section {
+    flex-direction: column;
+  }
+
+  .price-calculator-container h1 {
+    font-size: 25px;
+  }
+
+  .price-calculator-container .left-side,
+  .price-calculator-container .right-side {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .price-calculator-container .main-unit-buttons {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  .price-calculator-container .main-unit-buttons button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .price-calculator-container .image-container {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .price-calculator-container .image-container img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
