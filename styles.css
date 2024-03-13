@@ -192,7 +192,6 @@
   }
 
   .price-calculator-container .image-container {
-    flex-direction: column;
     align-items: center;
     margin-top: 20px;
   }
