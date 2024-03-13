@@ -17,7 +17,8 @@
   justify-content: center;
 }
 
-.price-calculator-container h1 {
+.price-calculator-container h2 {
+  font-size: 30px;
   text-align: center;
   color: #333;
 }
@@ -129,7 +130,7 @@
   align-items: center;
   padding: 10px 20px;
   margin-left: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .price-calculator-container .unit-buttons button {
