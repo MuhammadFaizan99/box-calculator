@@ -274,34 +274,82 @@ function getCoatingBase(coating) {
 
 // Function to change the unit of size input fields
 function changeUnit(unit) {
-  const unitInches = document.getElementById("unitInches");
-  const unitMm = document.getElementById("unitMm");
-  const unitCm = document.getElementById("unitCm");
+  const lengthInput = document.getElementById("length");
+  const widthInput = document.getElementById("width");
+  const heightInput = document.getElementById("height");
 
-  unitInches.classList.remove("active");
-  unitMm.classList.remove("active");
-  unitCm.classList.remove("active");
+  let lengthValue = parseFloat(lengthInput.value);
+  let widthValue = parseFloat(widthInput.value);
+  let heightValue = parseFloat(heightInput.value);
 
   switch (unit) {
     case "inches":
-      unitInches.classList.add("active");
-      document.getElementById("length").placeholder = "Enter Length in inches";
-      document.getElementById("width").placeholder = "Enter Width in inches";
-      document.getElementById("height").placeholder = "Enter Height in inches";
+      // Convert to inches if currently in mm or cm
+      if (document.getElementById("unitMm").classList.contains("active")) {
+        lengthValue /= 25.4;
+        widthValue /= 25.4;
+        heightValue /= 25.4;
+      } else if (document.getElementById("unitCm").classList.contains("active")) {
+        lengthValue /= 2.54;
+        widthValue /= 2.54;
+        heightValue /= 2.54;
+      }
       break;
     case "mm":
-      unitMm.classList.add("active");
-      document.getElementById("length").placeholder = "Enter Length in mm";
-      document.getElementById("width").placeholder = "Enter Width in mm";
-      document.getElementById("height").placeholder = "Enter Height in mm";
+      // Convert to mm if currently in inches or cm
+      if (document.getElementById("unitInches").classList.contains("active")) {
+        lengthValue *= 25.4;
+        widthValue *= 25.4;
+        heightValue *= 25.4;
+      } else if (document.getElementById("unitCm").classList.contains("active")) {
+        lengthValue *= 10;
+        widthValue *= 10;
+        heightValue *= 10;
+      }
       break;
     case "cm":
-      unitCm.classList.add("active");
-      document.getElementById("length").placeholder = "Enter Length in cm";
-      document.getElementById("width").placeholder = "Enter Width in cm";
-      document.getElementById("height").placeholder = "Enter Height in cm";
+      // Convert to cm if currently in inches or mm
+      if (document.getElementById("unitInches").classList.contains("active")) {
+        lengthValue *= 2.54;
+        widthValue *= 2.54;
+        heightValue *= 2.54;
+      } else if (document.getElementById("unitMm").classList.contains("active")) {
+        lengthValue /= 10;
+        widthValue /= 10;
+        heightValue /= 10;
+      }
       break;
   }
+
+  // Update input values
+  lengthInput.value = lengthValue.toFixed(2);
+  widthInput.value = widthValue.toFixed(2);
+  heightInput.value = heightValue.toFixed(2);
+
+  // Update placeholders
+  switch (unit) {
+    case "inches":
+      lengthInput.placeholder = "Enter Length in inches";
+      widthInput.placeholder = "Enter Width in inches";
+      heightInput.placeholder = "Enter Height in inches";
+      break;
+    case "mm":
+      lengthInput.placeholder = "Enter Length in mm";
+      widthInput.placeholder = "Enter Width in mm";
+      heightInput.placeholder = "Enter Height in mm";
+      break;
+    case "cm":
+      lengthInput.placeholder = "Enter Length in cm";
+      widthInput.placeholder = "Enter Width in cm";
+      heightInput.placeholder = "Enter Height in cm";
+      break;
+  }
+
+  // Update active class
+  document.getElementById("unitInches").classList.remove("active");
+  document.getElementById("unitMm").classList.remove("active");
+  document.getElementById("unitCm").classList.remove("active");
+  document.getElementById(`unit${unit.charAt(0).toUpperCase() + unit.slice(1)}`).classList.add("active");
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
