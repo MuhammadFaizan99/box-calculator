@@ -122,53 +122,6 @@
 .price-calculator-container .image-container img.fade-in {
   opacity: 1;
 }
-
-/* Media Query for Responsive Layout */
-@media (max-width: 700px) {
-  .price-calculator-container {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .price-calculator-container .main-section {
-    flex-direction: column;
-  }
-  .price-calculator-container h1 {
-    font-size: 25px;
-  }
-
-  .price-calculator-container .left-side,
-  .price-calculator-container .right-side {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 20px; 
-  }
-
-  .price-calculator-container .main-unit-buttons {
-    /* margin-left: 0;  */
-    flex-direction: column;
-    /* justify-content: center;  */
-  }
-
-  .price-calculator-container .main-unit-buttons button {
-    margin-right: 5px; 
-  }
-
-  .price-calculator-container .image-container {
-    flex-direction: column; 
-    align-items: center;
-    margin-top: 20px; 
-  }
-
-  .price-calculator-container .image-container img {
-    margin-right: 0; 
-    margin-bottom: 10px; 
-  }
-}
-
-
-
-
 .price-calculator-container .main-unit-buttons {
   display: flex;
   align-items: center;
@@ -197,4 +150,51 @@
 .price-calculator-container .unit-buttons button.active {
   background-color: #45a049;
   color: white;
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 700px) {
+  .price-calculator-container {
+    max-width: 100%;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .price-calculator-container .main-section {
+    flex-direction: column;
+  }
+  .price-calculator-container h1 {
+    font-size: 25px;
+  }
+
+  .price-calculator-container .left-side,
+  .price-calculator-container .right-side {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px; 
+  }
+
+  .price-calculator-container .main-unit-buttons {
+    flex-direction: column; /* Change to column direction */
+    align-items: center; 
+    padding: 10px; /* Adjust padding */
+    margin-left: 0px; 
+    margin-bottom: 20px;
+  }
+
+  .price-calculator-container .main-unit-buttons button {
+    margin-right: 0; 
+    margin-bottom: 10px;
+  }
+
+  .price-calculator-container .image-container {
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px; 
+  }
+
+  .price-calculator-container .image-container img {
+    margin-right: 0; 
+    margin-bottom: 10px; 
+  }
 }
