@@ -311,14 +311,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("unitMm").classList.remove("active");
   document.getElementById("unitCm").classList.remove("active");
   document.getElementById("productName").value = "mailer";
-  document.getElementById("paperQuality").value = "corrugated";
+  document.getElementById("paperQuality").value = "kraft";
   document.getElementById("length").value = "8";
   document.getElementById("width").value = "8";
   document.getElementById("height").value = "4";
   document.getElementById("color").value = "brown";
   document.getElementById("print").value = "none";
   document.getElementById("coating").value = "none";
-  document.getElementById("quantity").value = "1";
+  document.getElementById("quantity").value = "500";
 
   // Display selected images and calculate price
   displaySelectedImages();
