@@ -1,12 +1,83 @@
+// Object containing image URLs for each Product Name
+const productImages = {
+  mailer: "./Images/mailer.png",
+  folding: "./Images/folding.jpg",
+  rigid: "./Images/rigid.webp",
+  magnetic: "./Images/magnetic.png",
+  display: "./Images/display.jpg",
+  tray_sleeve: "./Images/tray_sleeve.png",
+  cardboard_tubes: "./Images/cardboard_tubes.jpg",
+  foldable_lid_base: "./Images/foldable_lid_base.webp",
+  cake: "./Images/cake.jpg",
+  paper: "./Images/paper.jpg",
+  pillow: "./Images/pillow.jpg",
+  shipping: "./Images/shipping.jpg",
+  rectangle: "./Images/Rectangle.webp",
+  pizza: "./Images/Pizza Type.jpg",
+  tuck_in: "./Images/tuck_in.webp"
+};
+
+// Object containing image URLs for each Paper Quality/Card Quality
+const paperQualityImages = {
+  kraft: "./Images/kraft.jpg",
+  white: "./Images/white.webp",
+  corrugated: "./Images/corrugated.jpg",
+  coated: "./Images/coated.jpg",
+  fbb: "./Images/fbb.webp"
+};
+
+// Function to display selected images
+function displaySelectedImages() {
+  const productName = document.getElementById("productName").value;
+  const paperQuality = document.getElementById("paperQuality").value;
+  const productImage = productImages[productName];
+  const paperQualityImage = paperQualityImages[paperQuality];
+  const productImageContainer = document.getElementById("productImageContainer");
+  const paperQualityImageContainer = document.getElementById("paperQualityImageContainer");
+
+  // Clear previous images
+  productImageContainer.innerHTML = "";
+  paperQualityImageContainer.innerHTML = "";
+
+  // Insert Product Name image
+  if (productImage) {
+    const productImg = document.createElement("img");
+    productImg.src = productImage;
+    productImg.alt = productName;
+    productImageContainer.appendChild(productImg);
+    productImg.classList.add("fade-in"); // Add fade-in class
+  }
+
+  // Insert Paper Quality image
+  if (paperQualityImage) {
+    const paperQualityImg = document.createElement("img");
+    paperQualityImg.src = paperQualityImage;
+    paperQualityImg.alt = paperQuality;
+    paperQualityImageContainer.appendChild(paperQualityImg);
+    paperQualityImg.classList.add("fade-in"); // Add fade-in class
+  }
+}
+
+// Function to calculate the price and display the result
 function calculatePrice() {
   const productName = document.getElementById("productName").value;
   const paperQuality = document.getElementById("paperQuality").value;
   const length = parseFloat(document.getElementById("length").value);
   const width = parseFloat(document.getElementById("width").value);
   const height = parseFloat(document.getElementById("height").value);
-  const sizeUnit = document.querySelector(
-    'input[name="sizeUnit"]:checked'
-  ).value;
+  let sizeUnit;
+  const unitInches = document.getElementById("unitInches");
+  const unitMm = document.getElementById("unitMm");
+  const unitCm = document.getElementById("unitCm");
+
+  if (unitInches.classList.contains("active")) {
+    sizeUnit = "inches";
+  } else if (unitMm.classList.contains("active")) {
+    sizeUnit = "mm";
+  } else if (unitCm.classList.contains("active")) {
+    sizeUnit = "cm";
+  }
+
   const color = document.getElementById("color").value;
   const print = document.getElementById("print").value;
   const coating = document.getElementById("coating").value;
@@ -25,11 +96,8 @@ function calculatePrice() {
   if (!quantity) errorMessages.push("Quantity");
 
   if (errorMessages.length > 0) {
-    const errorMessage =
-      "Please fill in the following fields: " + errorMessages.join(", ");
-    document.getElementById(
-      "result"
-    ).innerHTML = `<span style="color: red;">${errorMessage}</span>`;
+    const errorMessage = "Please fill in the following fields: " + errorMessages.join(", ");
+    document.getElementById("result").innerHTML = `<span style="color: red;">${errorMessage}</span>`;
     return; // Exit function if there are validation errors
   }
 
@@ -54,10 +122,10 @@ function calculatePrice() {
       break;
   }
 
-  const areaOfBox = 2*(
+  const areaOfBox = 2 * (
     size.length * size.width +
-      size.length * size.height +
-      size.width * size.height
+    size.length * size.height +
+    size.width * size.height
   );
   const productBase = getProductBase(productName);
   const paperQualityBase = getPaperQualityBase(paperQuality);
@@ -73,9 +141,11 @@ function calculatePrice() {
       areaOfBox * printBase +
       areaOfBox * coatingBase);
 
-  document.getElementById("result").innerHTML = `Price/Box: PKR ${(
-    price.toFixed(2) / quantity
-  ).toFixed(2)}<br>Total Price of Box: PKR ${price.toFixed(2)}`;
+  const resultElement = document.getElementById("result");
+  resultElement.innerHTML = `Price/Box: PKR ${(price.toFixed(2) / quantity).toFixed(2)}<br>Total Price of Box: PKR ${price.toFixed(2)}`;
+
+  // Triggering fade-in effect
+  resultElement.classList.add("show");
 }
 
 function getProductBase(productName) {
@@ -190,5 +260,37 @@ function getCoatingBase(coating) {
       return 0;
     default:
       return 0;
+  }
+}
+
+// Function to change the unit of size input fields
+function changeUnit(unit) {
+  const unitInches = document.getElementById("unitInches");
+  const unitMm = document.getElementById("unitMm");
+  const unitCm = document.getElementById("unitCm");
+  
+  unitInches.classList.remove("active");
+  unitMm.classList.remove("active");
+  unitCm.classList.remove("active");
+  
+  switch(unit) {
+    case "inches":
+      unitInches.classList.add("active");
+      document.getElementById("length").placeholder = "Enter Length in inches";
+      document.getElementById("width").placeholder = "Enter Width in inches";
+      document.getElementById("height").placeholder = "Enter Height in inches";
+      break;
+    case "mm":
+      unitMm.classList.add("active");
+      document.getElementById("length").placeholder = "Enter Length in mm";
+      document.getElementById("width").placeholder = "Enter Width in mm";
+      document.getElementById("height").placeholder = "Enter Height in mm";
+      break;
+    case "cm":
+      unitCm.classList.add("active");
+      document.getElementById("length").placeholder = "Enter Length in cm";
+      document.getElementById("width").placeholder = "Enter Width in cm";
+      document.getElementById("height").placeholder = "Enter Height in cm";
+      break;
   }
 }
