@@ -1,6 +1,6 @@
 .price-calculator-container {
   max-width: 800px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 15px auto;
   padding: 20px;
   background-color: #fff;
@@ -43,14 +43,14 @@
   padding: 10px;
   outline: none;
   margin-top: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 13px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .price-calculator-container input[type="number"] {
-  width: 93.5%;
+  width: 100%;
 }
 
 .price-calculator-container .price-buttons {
@@ -60,16 +60,17 @@
 }
 
 .price-calculator-container .calculatePrice {
-  width: 84%;
-  font-family: "Poppins", sans-serif;
-  background-color: #4CAF50;
+  width: 82.5%;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  background-color: #1E2C51;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .price-calculator-container .calculatePrice:hover {
-  background-color: #45a049;
+  background-color: #213364;
 }
 
 .price-calculator-container select {
@@ -128,7 +129,7 @@
 .price-calculator-container .main-unit-buttons {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 57px;
   margin-left: 45px;
   margin-bottom: 5px;
 }
@@ -137,21 +138,21 @@
   color: black;
   border: 2px solid #e8e6e6;
   background: transparent;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   border-radius: 5px;
-  padding: 7px 30px;
+  padding: 10px 30px;
   margin-right: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .price-calculator-container .unit-buttons button:hover {
-  background-color: #45a049;
+  background-color: #1E2C51;
   color: white;
 }
 
 .price-calculator-container .unit-buttons button.active {
-  background-color: #45a049;
+  background-color: #1E2C51;
   color: white;
 }
 

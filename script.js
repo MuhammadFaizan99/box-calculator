@@ -213,6 +213,8 @@ function getPaperQualityBase(paperQuality) {
 
 function getColorBase(color) {
   switch (color) {
+    case "none-color":
+      return 0.0;
     case "brown":
       return 0.04;
     case "white":
