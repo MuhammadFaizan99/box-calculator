@@ -83,6 +83,7 @@ function my_box_calculator_shortcode()
                     <div>
                         <label for="color">Color of Box:</label>
                         <select id="color">
+                            <option value="none-color">None</option>
                             <option value="brown">Brown</option>
                             <option value="white">White</option>
                         </select>
