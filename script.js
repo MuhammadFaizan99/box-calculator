@@ -172,7 +172,8 @@ function calculatePrice() {
   const productBase = getProductBase(productName);
   const paperQualityBase = getPaperQualityBase(
     paperQuality,
-    corrugatedThickness
+    corrugatedThickness,
+    gsm
   );
   const colorBase = getColorBase(color);
   const printBase = getPrintBase(print);
@@ -187,10 +188,6 @@ function calculatePrice() {
     areaOfBox * printBase +
     areaOfBox * coatingBase +
     ledWindowArea);
-
-  // if (hasLedWindow) {
-  //   price += areaOfBox * 0.2;
-  // }
 
   const resultElement = document.getElementById("result");
   resultElement.innerHTML = `Price/Box: PKR ${(
@@ -248,11 +245,11 @@ function getPaperQualityBase(paperQuality, corrugatedThickness, gsm) {
       return 0.05;
     case "corrugated":
       switch (corrugatedThickness) {
-        case "3_mm":
+        case "single_layer":
           return 0.05;
-        case "5_mm":
+        case "3_mm":
           return 0.09;
-        case "7_mm":
+        case "5_mm":
           return 0.13;
         default:
           return 0.0;
