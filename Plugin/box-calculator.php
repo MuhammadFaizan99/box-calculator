@@ -25,7 +25,7 @@ function my_box_calculator_shortcode()
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Box Calculator</title>
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -60,6 +60,7 @@ function my_box_calculator_shortcode()
                             <option value="rectangle">Rectangle</option>
                             <option value="pizza">Pizza Type</option>
                             <option value="tuck_in">Tuck in</option>
+                            <option value="product_none">None</option>
                         </select>
                     </div>
                     <div>
@@ -70,7 +71,40 @@ function my_box_calculator_shortcode()
                             <option value="corrugated">Corrugated Cardboard</option>
                             <option value="coated">Coated Paperboard</option>
                             <option value="fbb">Folding Box Board (FBB)</option>
+                            <option value="bleach_card">Bleach Card</option>
                         </select>
+                    </div>
+                    <div id="gsmContainer" class="gsm-container" style="display: none;">
+                        <div style="display: flex;">
+                            <input type="radio" checked name="gsm" id="270_gsm">
+                            <label for="270_gsm">270 GSM</label>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" name="gsm" id="300_gsm">
+                            <label for="300_gsm">300 GSM</label>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" name="gsm" id="350_gsm">
+                            <label for="350_gsm">350 GSM</label>
+                        </div>
+                    </div>
+                    <div id="mmContainer" class="mm-container" style="display: none;">
+                        <div style="display: flex;">
+                            <input type="radio" checked name="mm_corrugated" id="3_mm">
+                            <label for="3_mm">3mm</label>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" name="mm_corrugated" id="5_mm">
+                            <label for="5_mm">5mm</label>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" name="mm_corrugated" id="7_mm">
+                            <label for="7_mm">7mm</label>
+                        </div>
+                    </div>
+                    <div class="led-container">
+                        <input type="checkbox" id="ledWindow">
+                        <label for="ledWindow">Led Window</label>
                     </div>
                     <div>
                         <label>Size of Box:</label>

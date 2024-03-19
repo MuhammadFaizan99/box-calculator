@@ -52,6 +52,53 @@
 .price-calculator-container input[type="number"] {
   width: 100%;
 }
+.price-calculator-container input[type="checkbox"] {
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+.price-calculator-container .led-container{
+  display: flex;
+}
+
+.price-calculator-container input[type="checkbox"]:checked {
+  background-color: #4CAF50; /* Change color when checked */
+}
+.price-calculator-container input[type="checkbox"]:checked::before {
+  content: "\2713"; /* Unicode checkmark character */
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  color: white; /* Change color of checkmark */
+}
+.gsm-container,.mm-container{
+  display: flex;
+  justify-content: space-between;
+}
+.price-calculator-container .gsm-container div,.price-calculator-container .mm-container div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; 
+}
+
+.price-calculator-container .gsm-container input[type="radio"],.price-calculator-container .mm-container input[type="radio"] {
+  margin-right: 5px;
+  margin-bottom: 4px;
+}
+
+.price-calculator-container .gsm-container label,.price-calculator-container .mm-container label {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 16px;
+}
 
 .price-calculator-container .price-buttons {
   display: flex;

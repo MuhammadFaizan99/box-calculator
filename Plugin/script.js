@@ -1,29 +1,45 @@
 // Object containing image URLs for each Product Name
 const productImages = {
-  mailer: "https://static.vecteezy.com/system/resources/previews/013/362/649/non_2x/cardboard-box-brown-free-png.png",
-  folding: "https://5.imimg.com/data5/SELLER/Default/2022/8/OV/YX/QW/24057945/folding-cartons-packaging-box-500x500.png",
-  rigid: "https://www.emenacpackaging.com/wp-content/uploads/2021/12/Fliptop-Rigid-Boxes-2.webp",
-  magnetic: "https://5.imimg.com/data5/IW/LX/SF/SELLER-71546247/lcbm9-500x500.jpg",
-  display: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*-QgRXew_c2XBDrrWMbuxAw.jpeg",
+  mailer:
+    "https://static.vecteezy.com/system/resources/previews/013/362/649/non_2x/cardboard-box-brown-free-png.png",
+  folding:
+    "https://5.imimg.com/data5/SELLER/Default/2022/8/OV/YX/QW/24057945/folding-cartons-packaging-box-500x500.png",
+  rigid:
+    "https://www.emenacpackaging.com/wp-content/uploads/2021/12/Fliptop-Rigid-Boxes-2.webp",
+  magnetic:
+    "https://5.imimg.com/data5/IW/LX/SF/SELLER-71546247/lcbm9-500x500.jpg",
+  display:
+    "https://miro.medium.com/v2/resize:fit:828/format:webp/1*-QgRXew_c2XBDrrWMbuxAw.jpeg",
   tray_sleeve: "https://www.liquidprinter.com/images/custom-sleeve-box.jp",
-  cardboard_tubes: "https://m.media-amazon.com/images/I/61IYZ2C+HiL._AC_SY300_SX300_.jpg",
-  foldable_lid_base: "https://i5.walmartimages.com/asr/adbb1c07-2792-4d5e-8567-6bdc314ade5e.21616d58a2edb6bf2f1934d5afc11705.png?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+  cardboard_tubes:
+    "https://m.media-amazon.com/images/I/61IYZ2C+HiL._AC_SY300_SX300_.jpg",
+  foldable_lid_base:
+    "https://i5.walmartimages.com/asr/adbb1c07-2792-4d5e-8567-6bdc314ade5e.21616d58a2edb6bf2f1934d5afc11705.png?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
   cake: "https://m.media-amazon.com/images/I/51bnigyaEDL._AC_SL1500_.jpg",
-  paper: "https://cdn-hallh.nitrocdn.com/SAfCWcaKwKxWFpBYamCDCMxSsjTmthln/assets/images/optimized/rev-ceff243/nashonuma.com/wp-content/uploads/2021/11/kraft-paper-bags.jpg",
-  pillow: "https://s3.amazonaws.com/sireprinting.com/products/1654375989Kraft%20Pillow%20Boxes%20Sire%20Printing%2006.png-gallery4",
-  shipping: "https://www.arteau.com/wp-content/uploads/2018/06/boites-1.jpg.webp",
-  rectangle: "https://image.jimcdn.com/app/cms/image/transf/dimension=1820x1280:format=png/path/sd8122626139b36bd/image/i38255a44fbc4fc8c/version/1686253539/image.png",
+  paper:
+    "https://cdn-hallh.nitrocdn.com/SAfCWcaKwKxWFpBYamCDCMxSsjTmthln/assets/images/optimized/rev-ceff243/nashonuma.com/wp-content/uploads/2021/11/kraft-paper-bags.jpg",
+  pillow:
+    "https://s3.amazonaws.com/sireprinting.com/products/1654375989Kraft%20Pillow%20Boxes%20Sire%20Printing%2006.png-gallery4",
+  shipping:
+    "https://www.arteau.com/wp-content/uploads/2018/06/boites-1.jpg.webp",
+  rectangle:
+    "https://image.jimcdn.com/app/cms/image/transf/dimension=1820x1280:format=png/path/sd8122626139b36bd/image/i38255a44fbc4fc8c/version/1686253539/image.png",
   pizza: "https://mmwillcare.com/storage/products/b4.jpg",
   tuck_in: "https://img.uline.com/is/image/uline/HD10_8351?$UtilityRHD$",
 };
 
 // Object containing image URLs for each Paper Quality/Card Quality
 const paperQualityImages = {
-  kraft: "https://www.varietypapers.com.pk/wp-content/uploads/2020/08/412jwDZvGnL.jpg",
-  white: "https://5.imimg.com/data5/NX/DF/MY-31341022/fbb-coated-board-500x500.jpg",
+  kraft:
+    "https://www.varietypapers.com.pk/wp-content/uploads/2020/08/412jwDZvGnL.jpg",
+  white:
+    "https://5.imimg.com/data5/NX/DF/MY-31341022/fbb-coated-board-500x500.jpg",
   corrugated: "https://m.media-amazon.com/images/I/91tVjDpEZuL._AC_SL1500_.jpg",
-  coated: "https://www.greypaperboard.com/img5564.weyesimg.com/uploads/gaii0lsc.allweyes.com/images/15505563328652de47.jpg?imageView2/2/w/1920/q/100",
+  coated:
+    "https://www.greypaperboard.com/img5564.weyesimg.com/uploads/gaii0lsc.allweyes.com/images/15505563328652de47.jpg?imageView2/2/w/1920/q/100",
   fbb: "https://5.imimg.com/data5/SELLER/Default/2023/1/UG/RJ/JV/583245/folding-box-board-fbb-500x500.jpg",
+  bleach_card:
+    "https://stationers.pk/cdn/shop/products/BleachCardSheet22X28OffWhite.jpg?v=1673335811&width=600",
 };
 
 // Function to display selected images
@@ -49,7 +65,7 @@ function displaySelectedImages() {
     productImg.src = productImage;
     productImg.alt = productName;
     productImageContainer.appendChild(productImg);
-    productImg.classList.add("fade-in"); // Add fade-in class
+    productImg.classList.add("fade-in");
   }
 
   // Insert Paper Quality image
@@ -58,7 +74,21 @@ function displaySelectedImages() {
     paperQualityImg.src = paperQualityImage;
     paperQualityImg.alt = paperQuality;
     paperQualityImageContainer.appendChild(paperQualityImg);
-    paperQualityImg.classList.add("fade-in"); // Add fade-in class
+    paperQualityImg.classList.add("fade-in");
+  }
+  const mmContainer = document.getElementById("mmContainer");
+  if (paperQuality === "corrugated") {
+    mmContainer.style.display = "flex";
+  } else {
+    mmContainer.style.display = "none";
+  }
+
+  // Show/hide gsmContainer based on Paper Quality
+  const gsmContainer = document.getElementById("gsmContainer");
+  if (paperQuality === "bleach_card") {
+    gsmContainer.style.display = "flex";
+  } else {
+    gsmContainer.style.display = "none";
   }
 }
 
@@ -66,6 +96,10 @@ function displaySelectedImages() {
 function calculatePrice() {
   const productName = document.getElementById("productName").value;
   const paperQuality = document.getElementById("paperQuality").value;
+  const corrugatedThickness = document.querySelector(
+    'input[name="mm_corrugated"]:checked'
+  )?.id;
+  const gsm = document.querySelector('input[name="gsm"]:checked')?.id;
   const length = parseFloat(document.getElementById("length").value);
   const width = parseFloat(document.getElementById("width").value);
   const height = parseFloat(document.getElementById("height").value);
@@ -86,6 +120,7 @@ function calculatePrice() {
   const print = document.getElementById("print").value;
   const coating = document.getElementById("coating").value;
   const quantity = parseInt(document.getElementById("quantity").value);
+  const hasLedWindow = document.getElementById("ledWindow").checked;
 
   // Validation
   const errorMessages = [];
@@ -135,18 +170,25 @@ function calculatePrice() {
       size.length * size.height +
       size.width * size.height);
   const productBase = getProductBase(productName);
-  const paperQualityBase = getPaperQualityBase(paperQuality);
+  const paperQualityBase = getPaperQualityBase(
+    paperQuality,
+    corrugatedThickness
+  );
   const colorBase = getColorBase(color);
   const printBase = getPrintBase(print);
   const coatingBase = getCoatingBase(coating);
 
-  const price =
+  let price =
     quantity *
     (areaOfBox * productBase +
       areaOfBox * paperQualityBase +
       areaOfBox * colorBase +
       areaOfBox * printBase +
       areaOfBox * coatingBase);
+
+  if (hasLedWindow) {
+    price += areaOfBox * 0.2;
+  }
 
   const resultElement = document.getElementById("result");
   resultElement.innerHTML = `Price/Box: PKR ${(
@@ -189,23 +231,49 @@ function getProductBase(productName) {
       return 0.15;
     case "tuck_in":
       return 0.16;
+    case "product_none":
+      return 0.0;
     default:
       return 0;
   }
 }
 
-function getPaperQualityBase(paperQuality) {
+function getPaperQualityBase(paperQuality, corrugatedThickness, gsm) {
   switch (paperQuality) {
     case "kraft":
       return 0.06;
     case "white":
       return 0.05;
     case "corrugated":
-      return 0.05;
+      switch (corrugatedThickness) {
+        case "3_mm":
+          return 0.05;
+        case "5_mm":
+          return 0.09;
+        case "7_mm":
+          return 0.13;
+        default:
+          return 0.0;
+      }
     case "coated":
       return 0.04;
     case "fbb":
       return 0.04;
+    case "bleach_card":
+      if (gsm) {
+        switch (gsm) {
+          case "270_gsm":
+            return 0.07;
+          case "300_gsm":
+            return 0.08;
+          case "350_gsm":
+            return 0.09;
+          default:
+            return 0.0;
+        }
+      } else {
+        return 0.05;
+      }
     default:
       return 0;
   }
@@ -291,7 +359,9 @@ function changeUnit(unit) {
         lengthValue /= 25.4;
         widthValue /= 25.4;
         heightValue /= 25.4;
-      } else if (document.getElementById("unitCm").classList.contains("active")) {
+      } else if (
+        document.getElementById("unitCm").classList.contains("active")
+      ) {
         lengthValue /= 2.54;
         widthValue /= 2.54;
         heightValue /= 2.54;
@@ -303,7 +373,9 @@ function changeUnit(unit) {
         lengthValue *= 25.4;
         widthValue *= 25.4;
         heightValue *= 25.4;
-      } else if (document.getElementById("unitCm").classList.contains("active")) {
+      } else if (
+        document.getElementById("unitCm").classList.contains("active")
+      ) {
         lengthValue *= 10;
         widthValue *= 10;
         heightValue *= 10;
@@ -315,7 +387,9 @@ function changeUnit(unit) {
         lengthValue *= 2.54;
         widthValue *= 2.54;
         heightValue *= 2.54;
-      } else if (document.getElementById("unitMm").classList.contains("active")) {
+      } else if (
+        document.getElementById("unitMm").classList.contains("active")
+      ) {
         lengthValue /= 10;
         widthValue /= 10;
         heightValue /= 10;
@@ -351,7 +425,9 @@ function changeUnit(unit) {
   document.getElementById("unitInches").classList.remove("active");
   document.getElementById("unitMm").classList.remove("active");
   document.getElementById("unitCm").classList.remove("active");
-  document.getElementById(`unit${unit.charAt(0).toUpperCase() + unit.slice(1)}`).classList.add("active");
+  document
+    .getElementById(`unit${unit.charAt(0).toUpperCase() + unit.slice(1)}`)
+    .classList.add("active");
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
