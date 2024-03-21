@@ -172,23 +172,22 @@ function calculatePrice() {
   const productBase = getProductBase(productName);
   const paperQualityBase = getPaperQualityBase(
     paperQuality,
-    corrugatedThickness
+    corrugatedThickness,
+    gsm
   );
   const colorBase = getColorBase(color);
   const printBase = getPrintBase(print);
   const coatingBase = getCoatingBase(coating);
+  const ledWindowArea = hasLedWindow ? areaOfBox * 0.1 : 0;
 
   let price =
-    quantity *
-    (areaOfBox * productBase +
-      areaOfBox * paperQualityBase +
-      areaOfBox * colorBase +
-      areaOfBox * printBase +
-      areaOfBox * coatingBase);
-
-  if (hasLedWindow) {
-    price += areaOfBox * 0.2;
-  }
+  quantity *
+  (areaOfBox * productBase +
+    areaOfBox * paperQualityBase +
+    areaOfBox * colorBase +
+    areaOfBox * printBase +
+    areaOfBox * coatingBase +
+    ledWindowArea);
 
   const resultElement = document.getElementById("result");
   resultElement.innerHTML = `Price/Box: PKR ${(
@@ -246,11 +245,11 @@ function getPaperQualityBase(paperQuality, corrugatedThickness, gsm) {
       return 0.05;
     case "corrugated":
       switch (corrugatedThickness) {
-        case "3_mm":
+        case "single_layer":
           return 0.05;
-        case "5_mm":
+        case "3_mm":
           return 0.09;
-        case "7_mm":
+        case "5_mm":
           return 0.13;
         default:
           return 0.0;
@@ -263,11 +262,11 @@ function getPaperQualityBase(paperQuality, corrugatedThickness, gsm) {
       if (gsm) {
         switch (gsm) {
           case "270_gsm":
-            return 0.07;
+            return 0.3;
           case "300_gsm":
-            return 0.08;
+            return 0.4;
           case "350_gsm":
-            return 0.09;
+            return 0.5;
           default:
             return 0.0;
         }

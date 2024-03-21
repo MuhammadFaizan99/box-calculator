@@ -262,11 +262,11 @@ function getPaperQualityBase(paperQuality, corrugatedThickness, gsm) {
       if (gsm) {
         switch (gsm) {
           case "270_gsm":
-            return 0.2;
-          case "300_gsm":
             return 0.3;
-          case "350_gsm":
+          case "300_gsm":
             return 0.4;
+          case "350_gsm":
+            return 0.5;
           default:
             return 0.0;
         }
