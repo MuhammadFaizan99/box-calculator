@@ -54,8 +54,8 @@
 }
 .price-calculator-container input[type="checkbox"] {
   display: inline-block;
-  width: 20px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
   margin-right: 5px;
   appearance: none;
   -webkit-appearance: none;
