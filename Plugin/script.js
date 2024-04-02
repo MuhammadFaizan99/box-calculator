@@ -286,8 +286,6 @@ function getColorBase(color) {
       return 0.04;
     case "white":
       return 0.06;
-    case "two-color":
-      return 0.13;
     default:
       return 0;
   }
@@ -299,6 +297,8 @@ function getPrintBase(print) {
       return 0.0;
     case "single":
       return 0.03;
+    case "two-color":
+      return 0.09;
     case "multi":
       return 0.06;
     default:
